@@ -1,0 +1,11 @@
+[gd_scene load_steps=3 format=3 uid="uid://eau3wm6bc5cg"]
+
+[ext_resource type="PackedScene" uid="uid://d1qpanfkk7d83" path="res://ball_body.tscn" id="1_1hirp"]
+[ext_resource type="PackedScene" uid="uid://c2iv0t0u4tjvf" path="res://player.tscn" id="2_4wyjv"]
+
+[node name="Main" type="Node2D"]
+
+[node name="BallBody" parent="." instance=ExtResource("1_1hirp")]
+max_contacts_reported = 1
+
+[node name="Player" parent="." instance=ExtResource("2_4wyjv")]
