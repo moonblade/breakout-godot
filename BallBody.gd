@@ -4,7 +4,7 @@ extends RigidBody2D
 @export var velocity = 500
 
 func _draw():
-	draw_circle(Vector2(0,0), radius, "ff0000")
+	draw_circle(Vector2(0,0), radius, "FFC5C5")
 	pass
 
 func getStartingDirection():
@@ -30,7 +30,6 @@ func _process(delta):
 		print("GAME OVER")
 		self.linear_velocity.y = -abs(self.linear_velocity.y)
 	self.linear_velocity = velocity * self.linear_velocity / self.linear_velocity.length()
-
 
 
 func onCollide(body):
