@@ -7,7 +7,6 @@ var height = 50
 var width = 0
 
 func _draw():
-	draw_circle(Vector2(0,0), 5, "ff0000")
 	draw_rect(Rect2(Vector2(-width/2,-height/2), Vector2(width, height)), color, true, 1)
 	draw_rect(Rect2(Vector2(-width/2,-height/2), Vector2(width, height)), "000000", false, 2)
 	pass

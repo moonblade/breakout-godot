@@ -37,4 +37,3 @@ func onCollide(body):
 		var hitLocation = position.x - body.position.x
 		var newDirection = deg_to_rad(hitLocation / ((body.length + radius) / 2) * (maxAngle - 90))
 		self.linear_velocity = Vector2.UP.rotated(newDirection) * velocity
-		
