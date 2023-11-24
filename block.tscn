@@ -1,0 +1,13 @@
+[gd_scene load_steps=4 format=3 uid="uid://bb5pl2jd2k7ly"]
+
+[ext_resource type="Script" path="res://Block.gd" id="1_0nnxu"]
+[ext_resource type="Script" path="res://BlockCollide.gd" id="2_l7els"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_qcseh"]
+
+[node name="Block" type="Area2D"]
+script = ExtResource("1_0nnxu")
+
+[node name="BlockCollide" type="CollisionShape2D" parent="."]
+shape = SubResource("RectangleShape2D_qcseh")
+script = ExtResource("2_l7els")

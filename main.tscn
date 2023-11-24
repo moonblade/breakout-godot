@@ -1,9 +1,13 @@
-[gd_scene load_steps=3 format=3 uid="uid://eau3wm6bc5cg"]
+[gd_scene load_steps=5 format=3 uid="uid://eau3wm6bc5cg"]
 
 [ext_resource type="PackedScene" uid="uid://d1qpanfkk7d83" path="res://ball_body.tscn" id="1_1hirp"]
+[ext_resource type="Script" path="res://main.gd" id="1_6nd43"]
 [ext_resource type="PackedScene" uid="uid://c2iv0t0u4tjvf" path="res://player.tscn" id="2_4wyjv"]
+[ext_resource type="PackedScene" uid="uid://bb5pl2jd2k7ly" path="res://block.tscn" id="2_h6pf7"]
 
 [node name="Main" type="Node2D"]
+script = ExtResource("1_6nd43")
+blockScene = ExtResource("2_h6pf7")
 
 [node name="BallBody" parent="." instance=ExtResource("1_1hirp")]
 max_contacts_reported = 1
