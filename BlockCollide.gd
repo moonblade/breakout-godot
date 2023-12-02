@@ -9,7 +9,6 @@ func init(width):
 	var curShape = RectangleShape2D.new()
 	curShape.size = rectsize
 	set_shape(curShape)
-	print(shape.get_rect())
 	
 func _draw():
 #	draw_rect(shape.get_rect(),"ff0000", 10)

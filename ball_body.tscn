@@ -1,14 +1,24 @@
-[gd_scene load_steps=4 format=3 uid="uid://d1qpanfkk7d83"]
+[gd_scene load_steps=5 format=3 uid="uid://d1qpanfkk7d83"]
 
 [ext_resource type="Script" path="res://BallBody.gd" id="1_76lfm"]
 [ext_resource type="Script" path="res://BallCollide.gd" id="2_h2e26"]
 
+[sub_resource type="PhysicsMaterial" id="PhysicsMaterial_xy2jn"]
+friction = 0.0
+bounce = 1.0
+
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_ys0w8"]
 
 [node name="BallBody" type="RigidBody2D"]
+position = Vector2(982, 836)
 collision_layer = 2
+physics_material_override = SubResource("PhysicsMaterial_xy2jn")
+gravity_scale = 2.66454e-15
+max_contacts_reported = 1
 contact_monitor = true
+freeze_mode = 1
 script = ExtResource("1_76lfm")
+metadata/_edit_group_ = true
 
 [node name="BallCollide" type="CollisionShape2D" parent="."]
 shape = SubResource("RectangleShape2D_ys0w8")

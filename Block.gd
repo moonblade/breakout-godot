@@ -1,4 +1,4 @@
-extends Area2D
+extends RigidBody2D
 var left = 0
 var top = 0
 var colors = ["FF8080", "FFCF96", "CDFAD5", "F6FDC3"]
@@ -13,10 +13,11 @@ func _draw():
 	
 # Called when the node enters the scene tree for the first time.
 func _ready():
+	
 	var totalBlocks = get_parent().totalBlocks
 	self.width = get_viewport_rect().size.x/totalBlocks
 	self.color = colors[floor(top/2)]
-	self.position = Vector2((left + 0.5) * (get_viewport_rect().size.x/totalBlocks), (top + 0.5) * height)
+	self.position = Vector2((left + 0.5) * (get_viewport_rect().size.x/totalBlocks), (top + 2.5) * height)
 	$BlockCollide.init(width)
 
 func init(top=0,left=0):
@@ -26,3 +27,6 @@ func init(top=0,left=0):
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):
 	pass
+
+func ballCollided(area):
+	print(area)

@@ -5,9 +5,13 @@
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_qcseh"]
 
-[node name="Block" type="Area2D"]
+[node name="Block" type="RigidBody2D"]
+gravity_scale = 2.66454e-15
+freeze = true
 script = ExtResource("1_0nnxu")
 
 [node name="BlockCollide" type="CollisionShape2D" parent="."]
 shape = SubResource("RectangleShape2D_qcseh")
 script = ExtResource("2_l7els")
+
+[connection signal="body_entered" from="." to="." method="ballCollided"]
