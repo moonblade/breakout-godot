@@ -27,3 +27,4 @@ label_settings = SubResource("LabelSettings_jp7lg")
 script = ExtResource("5_e1mj7")
 
 [connection signal="UpdateScore" from="BallBody" to="Score" method="_on_ball_body_update_score"]
+[connection signal="hitTop" from="BallBody" to="Player" method="_on_ball_body_hit_top"]
